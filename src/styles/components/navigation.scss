@@ -1,0 +1,105 @@
+.menu {
+  color: $color-white;
+  left: 0;
+  padding-top: 5.6rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: z('menu');
+
+  .loaded & {
+
+  }
+
+  @include media('<=phone') {
+    padding-top: 2rem;
+  }
+}
+
+.menu__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 125.6rem;
+
+  @include media('<=phone') {
+    width: 31.2rem;
+  }
+}
+
+.menu__list {
+  display: flex;
+}
+
+.menu__item {
+  &:not(:last-child) {
+    margin-right: 4rem;
+  }
+
+  &:last-child {
+    display: none;
+  }
+
+  @include media('<=phone') {
+    &:last-child {
+      display: block;
+    }
+
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+
+    &:not(:first-child) {
+      margin-left: 2rem;
+    }
+  }
+}
+
+.menu__link {
+  display: block;
+  font-size: 1.8rem;
+  opacity: 0.2;
+  text-transform: lowercase;
+  transition: opacity 0.4s $ease-out-cubic;
+
+  &--main {
+    width: 12.181rem;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  .menu--active & {
+    opacity: 1;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  @include media('<=phone') {
+    &--main:last-child {
+      display: none;
+    }
+  }
+}
+
+.menu__icon {
+  display: none;
+  width: 1.8rem;
+
+  @include media('<=phone') {
+    display: block;
+  }
+}
+
+.menu__text {
+  @include media('<=phone') {
+    display: none;
+  }
+}
+
+.menu__text__invisible {
+  font-size: 0;
+}

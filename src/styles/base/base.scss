@@ -1,0 +1,28 @@
+html {
+  background: $color-black;
+  color: $color-white;
+  font-family: $font-roobert;
+  font-size: calc(100vw / 1920 * 10);
+  height: var(--100vh);
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  @include media('<=phone') {
+    font-size: calc(100vw / 375 * 10);
+  }
+}
+
+.app {
+  position: relative;
+}
+
+.home {
+  visibility: hidden;
+
+  .loaded & {
+    visibility: visible;
+  }
+}
