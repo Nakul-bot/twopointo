@@ -9,9 +9,6 @@ import Handlebars from 'vite-plugin-handlebars'
 import Stylelint from 'vite-plugin-stylelint'
 import { handlebarsHelpers } from './src/data/handlebars/helpers.js'
 
-import Prismic from './src/data/prismic/Prismic.js'
-import PrismicMedias from './src/data/prismic/PrismicMedias.js'
-
 import SpriteHelper from './src/data/sprites/helper.js'
 
 export default async ({ mode }) => {
@@ -19,13 +16,6 @@ export default async ({ mode }) => {
     ...process.env,
     ...loadEnv(mode, process.cwd())
   }
-
-  // Prismic
-  const prismic = new Prismic()
-  const results = await prismic.getData()
-
-  const prismicMedias = new PrismicMedias(results)
-  await prismicMedias.generate()
 
   // SVG Sprite
   const spriteHelper = new SpriteHelper('src/sprites')
@@ -52,7 +42,7 @@ export default async ({ mode }) => {
       Handlebars({
         context () {
           return {
-            ...results
+            // ...results
           }
         },
         helpers: handlebarsHelpers,

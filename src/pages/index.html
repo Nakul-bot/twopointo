@@ -13,7 +13,7 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>{{meta.data.title}}</title>
+        <title>ABDULLAH AWAD®</title>
         <meta name="description" content="{{meta.data.description}}" />
 
         <meta property="og:title" content="{{meta.data.title}}" />
@@ -27,53 +27,6 @@
     </head>
     <body>
         <div class="app">
-            <nav class="menu">
-                <div class="menu__wrapper">
-                    <a class="menu__link menu__link--main" href="/">
-                        {{navigation.data.logo}}
-                    </a>
-
-                    <ul class="menu__list">
-                        {{#each navigation.data.list}}
-                            <li class="menu__item">
-                                <a aria-label="{{text}}" href="{{prismicLink link}}" class="menu__link">
-                                    {{#ifCond icon '==' 'twitter'}}
-                                        <svg class="menu__icon" viewBox="0 0 14 12" xmlns="http://www.w3.org/2000/svg">
-                                            <use xlink:href="#twitter" />
-                                        </svg>
-                                    {{/ifCond}}
-
-                                    {{#ifCond icon '==' 'instagram'}}
-                                        <svg class="menu__icon" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                            <use xlink:href="#instagram" />
-                                        </svg>
-                                    {{/ifCond}}
-
-                                    {{#ifCond icon '==' 'linkedin'}}
-                                        <svg class="menu__icon" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                            <use xlink:href="#linkedin" />
-                                        </svg>
-                                    {{/ifCond}}
-
-                                    {{#ifCond icon '==' 'email'}}
-                                        <svg class="menu__icon" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                            <use xlink:href="#email" />
-                                        </svg>
-                                    {{/ifCond}}
-
-                                    <span class="menu__text">
-                                        {{text}}
-                                    </span>
-                                </a>
-                            </li>
-                        {{/each}}
-                    </ul>
-
-                    <a class="menu__link menu__link--main" href="{{navigation.data.email_link}}">
-                        {{navigation.data.email_text}}
-                    </a>
-                </div>
-            </nav>
 
             <div class="preloader">
                 <div class="preloader__background"></div>
@@ -87,7 +40,7 @@
                 <div class="home__wrapper">
                     <header class="header" data-section>
                         <div class="header__title" data-title>
-                            {{{prismicHTML about.data.header}}}
+
                         </div>
 
                         <div class="header__arrow">
@@ -95,110 +48,6 @@
                             <div class="header__arrow__triangle"></div>
                         </div>
                     </header>
-
-                    <section class="about" data-section>
-                        <article class="about__description">
-                            {{{prismicHTML about.data.description}}}
-                        </article>
-
-                        <div class="about__aside">
-                            <article class="about__aside__section">
-                                <h2 class="about__aside__section__title">
-                                    Experience
-                                </h2>
-
-                                <div class="about__aside__section__description">
-                                    {{{prismicHTML about.data.experience}}}
-                                </div>
-                            </article>
-
-                            <article class="about__aside__section">
-                                <h2 class="about__aside__section__title">
-                                    Awards
-                                </h2>
-
-                                <div class="about__aside__section__description">
-                                    {{{prismicHTML about.data.awards}}}
-                                </div>
-                            </article>
-
-                            <article class="about__aside__section">
-                                <h2 class="about__aside__section__title">
-                                    Press
-                                </h2>
-
-                                <div class="about__aside__section__description">
-                                    {{{prismicHTML about.data.press}}}
-                                </div>
-                            </article>
-
-                            <article class="about__aside__section">
-                                <h2 class="about__aside__section__title">
-                                    Credits
-                                </h2>
-
-                                <div class="about__aside__section__description">
-                                    {{{prismicHTML about.data.extra}}}
-                                </div>
-                            </article>
-                        </div>
-                    </section>
-
-                    {{#each projects}}
-                        <article class="project" data-section>
-                            <div class="project__wrapper">
-                                <h2 class="project__title" data-title>
-                                    <div class="project__title__wrapper">
-                                        {{breaklines data.title}}
-                                    </div>
-                                </h2>
-                            </div>
-
-                            <div class="project__gallery">
-                                <div class="project__wrapper">
-                                    <div class="project__gallery__box">
-                                        <div class="project__gallery__wrapper">
-                                            {{#each data.gallery}}
-                                                {{#ifCond media.kind '==' 'document'}}
-                                                    <figure class="project__gallery__media">
-                                                        <div class="project__gallery__media__box">
-                                                            <video autoplay class="project__gallery__media__image" data-src="{{prismicMedia media}}" data-src-mobile="{{prismicMedia mobile}}" loop muted playsinline></video>
-                                                        </div>
-                                                    </figure>
-                                                {{/ifCond}}
-
-                                                {{#ifCond media.kind '!=' 'document'}}
-                                                    <figure class="project__gallery__media">
-                                                        <div class="project__gallery__media__box">
-                                                            <img alt="{{media.alt}}" class="project__gallery__media__image" data-src="{{prismicMedia media}}" data-src-mobile="{{prismicMedia mobile}}">
-                                                        </div>
-                                                    </figure>
-                                                {{/ifCond}}
-                                            {{/each}}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="project__wrapper">
-                                <div class="project__content">
-                                    <header class="project__header">
-                                        {{{prismicHTML data.header}}}
-                                    </header>
-
-                                    <div class="project__box">
-                                        <div class="project__description">
-                                            {{{prismicHTML data.description}}}
-                                        </div>
-
-                                        <div class="project__credits">
-                                            {{{prismicHTML data.credits}}}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                    {{/each}}
                 </div>
             </div>
         </div>
