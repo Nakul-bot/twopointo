@@ -1,68 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
 
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-        <link rel="manifest" href="/favicon/site.webmanifest">
-        <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000">
-        <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="theme-color" content="#000000">
+<head>
+    <meta charset="UTF-8" />
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#000000">
 
-        <title>ABDULLAH AWAD®</title>
-        <meta name="description" content="{{meta.data.description}}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <meta property="og:title" content="{{meta.data.title}}" />
-        <meta property="og:image" content="{{meta.data.image.url}}" />
-        <meta property="og:description" content="{{meta.data.description}}" />
+    <title>ABDULLAH AWAD®</title>
+    <meta name="description" content="{{meta.data.description}}" />
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="{{meta.data.title}}" />
-        <meta name="twitter:description" content="{{meta.data.description}}" />
-        <meta name="twitter:image:src" content="{{meta.data.image.url}}" />
-    </head>
-    <body>
-        <div class="app">
+    <meta property="og:title" content="{{meta.data.title}}" />
+    <meta property="og:image" content="{{meta.data.image.url}}" />
+    <meta property="og:description" content="{{meta.data.description}}" />
 
-            <div class="preloader">
-                <div class="preloader__background"></div>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{meta.data.title}}" />
+    <meta name="twitter:description" content="{{meta.data.description}}" />
+    <meta name="twitter:image:src" content="{{meta.data.image.url}}" />
+</head>
 
-                <div class="preloader__text">
-                    0
-                </div>
-            </div>
+<body>
+    <div class="app">
 
-            <div class="home">
-                <div class="home__wrapper">
-                    <header class="header" data-section>
-                        <div class="header__title" data-title>
+        <div class="preloader">
+            <div class="preloader__background"></div>
 
-                        </div>
-
-                        <div class="header__arrow">
-                            <div class="header__arrow__dash"></div>
-                            <div class="header__arrow__triangle"></div>
-                        </div>
-                    </header>
-                </div>
+            <div class="preloader__text">
+                0
             </div>
         </div>
 
-        <script type="module" src="{{resolve-from-root '../app/main.js'}}"></script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NJJE01FZTR"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
+        <div class="home">
+            <div class="home__wrapper">
+                <header class="header">
+                    <div id="my-keen-slider" class="keen-slider header__slider">
+                        <figure class="header__slider__slide">
+                            <video autoplay class="header__slider__slide__video slider__slide__video1" data-src="./medias/1.mp4" src="./medias/1.mp4" loop muted playsinline></video>
+                        </figure>
+                        <figure class="header__slider__slide">
+                            <video autoplay class="header__slider__slide__video slider__slide__video2" data-src="./medias/2.mp4" src="./medias/2.mp4" loop muted playsinline></video>
+                        </figure>
+                        <figure class="header__slider__slide">
+                            <video autoplay class="header__slider__slide__video slider__slide__video3" data-src="./medias/1.mp4" src="./medias/3.mp4" loop muted playsinline></video>
+                        </figure>
+                        <figure class="header__slider__slide">
+                            <video autoplay class="header__slider__slide__video slider__slide__video4" data-src="./medias/3.mp4" src="./medias/4.mp4" loop muted playsinline></video>
+                        </figure>
+                        <figure class="header__slider__slide">
+                            <video autoplay class="header__slider__slide__video slider__slide__video5" data-src="./medias/4.mp4" src="./medias/5.mp4" loop muted playsinline></video>
+                        </figure>
+                        <figure class="header__slider__slide">
+                            <video autoplay class="header__slider__slide__video slider__slide__video6" data-src="./medias/5.mp4" src="./medias/1.mp4" loop muted playsinline></video>
+                        </figure>
+                        <figure class="header__slider__slide">
+                            <video autoplay class="header__slider__slide__video slider__slide__video7" data-src="./medias/1.mp4" src="./medias/2.mp4" loop muted playsinline></video>
+                        </figure>
+                    </div>
 
-            function gtag() {
-                dataLayer.push(arguments);
-            }
+                    <div class="header__content">
+                        <div class="header__content__slide header__content__slide--1">
+                            <p class="header__content__slide__label">Saman Kesh</p>
+                            <h1 class="header__content__slide__title">That gr feeling</h1>
+                        </div>
+                        <div class="header__content__slide header__content__slide--2">
+                            <p class="header__content__slide__label">Florian Roske</p>
+                            <h1 class="header__content__slide__title">Merry future</h1>
+                        </div>
+                        <div class="header__content__slide header__content__slide--3">
+                            <p class="header__content__slide__label">Linnea Bergman</p>
+                            <h1 class="header__content__slide__title">Prespectives</h1>
+                        </div>
+                        <div class="header__content__slide header__content__slide--4">
+                            <p class="header__content__slide__label">Cabalo Pistola</p>
+                            <h1 class="header__content__slide__title">Rav4 Adventure</h1>
+                        </div>
+                        <div class="header__content__slide header__content__slide--5">
+                            <p class="header__content__slide__label">Caro Weller</p>
+                            <h1 class="header__content__slide__title">Eucerin urea</h1>
+                        </div>
+                        <div class="header__content__slide header__content__slide--6">
+                            <p class="header__content__slide__label">Saman Kesh</p>
+                            <h1 class="header__content__slide__title">That gr feeling</h1>
+                        </div>
+                        <div class="header__content__slide header__content__slide--7">
+                            <p class="header__content__slide__label">Florian Roske</p>
+                            <h1 class="header__content__slide__title">Merry future</h1>
+                        </div>
+                    </div>
 
-            gtag('js', new Date());
-            gtag('config', 'G-NJJE01FZTR');
-        </script>
-    </body>
+                    <div id="thumbnails" class="header__thumbnails">
+
+                    </div>
+                </header>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="{{resolve-from-root '../app/main.js'}}"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NJJE01FZTR"></script>
+    <script>
+        // window.dataLayer = window.dataLayer || [];
+
+        // function gtag() {
+        //     dataLayer.push(arguments);
+        // }
+
+        // gtag('js', new Date());
+        // gtag('config', 'G-NJJE01FZTR');
+    </script>
+</body>
+
 </html>

@@ -1,6 +1,8 @@
 .preloader {
   @extend %cover;
 
+  display: none;
+
   z-index: z('preloader');
 }
 

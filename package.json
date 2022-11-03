@@ -18,6 +18,7 @@
     "imagemin": "^8.0.1",
     "imagemin-webp": "^7.0.0",
     "include-media": "^1.4.10",
+    "keen-slider": "^6.8.3",
     "nanoevents": "^7.0.1",
     "node-fetch": "^3.2.10",
     "normalize-wheel": "^1.0.1",

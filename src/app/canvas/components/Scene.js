@@ -2,7 +2,6 @@ import AutoBind from 'auto-bind'
 import { Plane, Transform } from 'ogl'
 
 import Slider from '@/canvas/components/Slider'
-import Title from '@/canvas/components/Title'
 
 export default class Scene {
   constructor ({ area, camera, gl, group, mouse, page, renderer, sizes }) {
@@ -21,7 +20,6 @@ export default class Scene {
   create () {
     this.createWrapper()
     this.createSliders()
-    this.createTitles()
   }
 
   createWrapper () {
@@ -51,24 +49,6 @@ export default class Scene {
     }
   }
 
-  createTitles () {
-    this.titlesElements = this.page.element.querySelectorAll('[data-title]')
-
-    if (this.titlesElements?.length) {
-      this.titles = this.titlesElements.map(element => {
-        return new Title({
-          area: this.area,
-          camera: this.camera,
-          element,
-          gl: this.gl,
-          group: this.group,
-          renderer: this.renderer,
-          sizes: this.sizes
-        })
-      })
-    }
-  }
-
   /**
    * Events.
    */
@@ -86,9 +66,6 @@ export default class Scene {
    * Animation.
    */
   show () {
-    this.titles.forEach(title => {
-      title.createObserver()
-    })
   }
 
   /**

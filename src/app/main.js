@@ -1,3 +1,4 @@
+import 'keen-slider/keen-slider.min.css'
 import '../styles/index.scss'
 
 import '@/utils/easings'

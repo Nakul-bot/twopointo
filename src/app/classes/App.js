@@ -148,15 +148,29 @@ export default class App {
    * Listeners.
    */
   addEventListeners () {
-    window.addEventListener('mousedown', this.onMouseDown, { passive: true })
-    window.addEventListener('mousemove', this.onMouseMove, { passive: true })
-    window.addEventListener('mouseup', this.onMouseUp, { passive: true })
+    window.addEventListener('mousedown', this.onMouseDown, {
+      passive: true
+    })
+    window.addEventListener('mousemove', this.onMouseMove, {
+      passive: true
+    })
+    window.addEventListener('mouseup', this.onMouseUp, {
+      passive: true
+    })
 
-    window.addEventListener('touchstart', this.onMouseDown, { passive: true })
-    window.addEventListener('touchmove', this.onMouseMove, { passive: true })
-    window.addEventListener('touchup', this.onMouseUp, { passive: true })
+    window.addEventListener('touchstart', this.onMouseDown, {
+      passive: true
+    })
+    window.addEventListener('touchmove', this.onMouseMove, {
+      passive: true
+    })
+    window.addEventListener('touchup', this.onMouseUp, {
+      passive: true
+    })
 
-    document.body.addEventListener('mouseleave', this.onMouseUp, { passive: true })
+    document.body.addEventListener('mouseleave', this.onMouseUp, {
+      passive: true
+    })
 
     window.addEventListener('resize', this.onResize)
   }
