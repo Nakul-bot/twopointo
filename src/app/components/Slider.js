@@ -5,6 +5,7 @@ import Component from '@/classes/Component'
 
 export default class extends Component {
   constructor () {
+    console.log('constructor')
     super({
       element: '',
       elements: {
@@ -12,9 +13,8 @@ export default class extends Component {
       }
     })
 
-    this.ThumbnailPlugin()
-    this.slider()
-    this.thumbnail()
+    this.createSlider()
+    this.createThumbnail()
   }
 
   ThumbnailPlugin (main) {
@@ -40,6 +40,10 @@ export default class extends Component {
       }
 
       slider.on('created', () => {
+        console.log(slider)
+        if (slider === null) {
+          return
+        }
         addActive(slider.track.details.rel)
         addClickEvents()
         main.on('animationStarted', (main) => {
@@ -52,13 +56,14 @@ export default class extends Component {
     }
   }
 
-  slider () {
-    this.slider = new KeenSlider(
+  createSlider () {
+    this.sliderComponent = new KeenSlider(
       '#my-keen-slider', {
         loop: true
       },
       [
         (slider) => {
+          console.log('slider', slider)
           let timeout
           let mouseOver = false
 
@@ -92,7 +97,7 @@ export default class extends Component {
     )
   }
 
-  thumbnail () {
+  createThumbnail () {
     this.thumbnail = new KeenSlider(
       '#thumbnails', {
         initial: 0,
@@ -101,7 +106,7 @@ export default class extends Component {
           spacing: 10
         }
       },
-      [this.ThumbnailPlugin(this.slider)]
+      [this.ThumbnailPlugin(this.sliderComponent)]
     )
   }
 }

@@ -6,6 +6,7 @@ import AppSprites from '@/classes/AppSprites'
 import Page from '@/classes/Page'
 
 import Preloader from '@/components/Preloader'
+import Slider from '@/components/Slider'
 
 export default class App {
   constructor () {
@@ -49,8 +50,9 @@ export default class App {
     this.canvas = new Canvas({
       page: this.page
     })
-
+    this.slider = new Slider()
     this.components.push(this.canvas)
+    this.components.push(this.slider)
   }
 
   initPreloader () {
