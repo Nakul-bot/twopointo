@@ -22,9 +22,14 @@
   }
 }
 
-[class^="slider__slide__video"],
-[class*=" slider__slide__video"] {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+.thumbnail .keen-slider__slide {
+    font-size: 30px;
+    margin-top: 10px;
+    height: 100px;
+  }
+  .thumbnail .keen-slider__slide {
+    cursor: pointer;
+  }
+  .thumbnail .keen-slider__slide.active {
+    border: 2px dashed white;
+  }

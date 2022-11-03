@@ -25,8 +25,6 @@ export default class extends Component {
         })
       }
 
-      console.log('working?')
-
       function addActive (idx) {
         slider.slides[idx].classList.add('active')
       }
@@ -40,10 +38,6 @@ export default class extends Component {
       }
 
       slider.on('created', () => {
-        console.log(slider)
-        if (slider === null) {
-          return
-        }
         addActive(slider.track.details.rel)
         addClickEvents()
         main.on('animationStarted', (main) => {
@@ -63,7 +57,6 @@ export default class extends Component {
       },
       [
         (slider) => {
-          console.log('slider', slider)
           let timeout
           let mouseOver = false
 
